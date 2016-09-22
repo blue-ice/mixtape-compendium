@@ -1,0 +1,33 @@
+@media screen and (max-width: 800px) { 
+  .text_div {width:80vw;} 
+
+  .logo_div {
+    width: 80vw; background-color:blue;}
+  .text_div a { width: 60%; }
+  #select_shifter {
+	-webkit-transition:.3s;
+	-moz-transition:.3s;
+	-o-transition:.3s;
+	transition:.3s;
+	}
+
+}
+
+@media all and (max-device-width: 800px) {
+  body { background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg") #000 no-repeat center center fixed; background-size: cover; }
+  #bgvid { display: none; }
+  
+
+  .text_div {width:80vw;} 
+
+  .logo_div {
+    width: 80vw; background-color:blue;}
+  .text_div a { width: 60%; }
+
+  #select_shifter {
+	-webkit-transition:.3s;
+	-moz-transition:.3s;
+	-o-transition:.3s;
+	transition:.3s;
+	}
+}

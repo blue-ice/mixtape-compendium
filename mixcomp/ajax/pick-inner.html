@@ -1,0 +1,50 @@
+
+	
+
+
+
+	<div class="dropdown_div">
+		<h2>Play a cassette from</h2>
+
+		<div class="selectize-outer-div">
+			<form>
+				<select id="select-location" required class="demo-default">
+					<option value="0">anywhere</option>
+					<option value="1">denver, co</option>
+					<option value="2">savannah, ga</option>
+				</select>
+			</form>
+		</div>
+
+	</div>
+	
+	<div id="select-contents">
+		<div id="select-contents-centerer">
+		</div>
+	</div>
+	<script>
+
+	var select_location, $select_location;
+
+	$select_location = $('#select-location').selectize({
+		create: false,
+		sortField: {
+			field: 'text',
+			direction: 'asc'
+		},
+		onChange: function(value) {
+			loadMixtapes($("#select-location option:selected").text());
+		}
+
+	});
+
+
+	select_location = $select_location[0].selectize;
+
+	loadMixtapes("anywhere");
+
+	</script>
+
+
+
+

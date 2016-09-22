@@ -1,0 +1,280 @@
+
+
+.dropdown_div {
+	text-align: left;
+	margin-top: 4vh;
+
+}
+
+.selectize-outer-div {
+	display:inline-block;
+
+  vertical-align: middle;
+  margin-top: 0.7vh;
+
+
+    width: 14vw !important;
+    min-width: 14em !important;
+}
+
+
+
+.mixtape-searched-img {
+	margin:0 auto;
+	width:100%;
+	display:block;
+}
+
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+  color: #ffaa44 !important;
+  font-family: 'Bitter',serif !important;
+  font-size: 23px !important;
+  line-height: 40px !important;
+}
+
+.selectize-input,
+.selectize-control.single .selectize-input.input-active,
+.selectize-dropdown {
+  background: #222222 !important;
+}
+
+.selectize-dropdown .active, .selectize-dropdown .active.create {
+  background-color: #444444 !important;
+  color: #ffbb66 !important;
+}
+
+
+
+
+
+.text_div a.mixtape-searched {
+	display:block;
+	border:none;
+	margin:auto;
+	margin-top:1.5vw;
+	margin-bottom:.75vw;
+	color:#fff;
+	border-radius:4px;
+	outline:none;
+	font-family:'Montserrat',sans-serif;
+	text-decoration:none;
+
+}
+
+
+#select-contents {
+	/* SHOULD BE LEFT IF LESS THAN 4*/
+	text-align: left;
+	padding: 2vh 4.4vw;
+
+}
+
+#select-contents-centerer {
+	text-align: left;
+    display: inline-block;
+    width: 0;
+    width: auto;
+}
+
+.text_div a.mixtape-searched {
+	display: inline-block;
+
+	font-size: 0;
+
+	width: 19.54vw;
+
+	padding: 0;
+	border: 3px solid #ffffff;
+
+
+	  margin: 1vw 1vw;
+	  background: #fff;
+	  cursor: pointer;
+
+
+}
+
+
+
+.text_div a.mixtape-searched img.mixtape-searched-img { 
+	display: inline-block;
+	margin: 0vw 0 0.18119436201vw 0;
+}
+
+.text_div a.mixtape-searched .mixtape-searched-banner { 
+  /*background: rgb(36,50,87);*/
+  background: #ddd;
+	padding: 0.65229vw;
+}
+
+
+.text_div a.mixtape-searched .mixtape-searched-banner > * { 
+	display: table-cell;
+}
+
+
+.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-vert-rule {
+	width: 2px;
+	height:2.1743323vw;
+	background: #000;
+}
+
+
+.text_div a.mixtape-searched:hover > .mixtape-searched-banner { 
+  background: rgba(81,168,245,1);
+
+	-webkit-transition:.3s background;
+	transition:.3s background;
+
+
+}
+
+.text_div a.mixtape-searched .mixtape-searched-banner h5 {
+	color: #000;
+    font-weight: normal;/*
+	font-size:2.3vw;*/
+
+	/* Font size is now provided by JQuery JSON
+	font-size:2.1vw;
+	*/
+	vertical-align: middle;
+
+
+	padding-right: 0.65229vw;
+
+
+}
+
+.text_div a.mixtape-searched .mixtape-searched-banner h6 {
+	color: #000;
+    font-weight: normal;
+
+	vertical-align: middle;
+	font-size: 0.7247vw;
+	margin: 0;
+}
+
+.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-tracks-time {
+	
+	color: #000;
+    font-weight: normal;
+	vertical-align: middle;
+
+	padding-left: 0.65229vw;
+
+	margin: 0;
+	height:2.1743323vw;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+.dropdown_div h2 {
+
+	margin: 0;
+	margin-left: 4vw;
+	margin-right: 0.5em;
+	font-size: 2.5em;
+	padding: 0;
+	color: #ccc;
+	display: inline-block;
+
+	vertical-align: middle;
+}
+
+
+@media screen and (max-width: 850px) { 
+
+	.selectize-outer-div {
+		margin-left: 4vw;
+		margin-top: 2vh;
+		width: 60vw !important;
+	}
+
+	#select-contents {
+		padding: 2vh 2vw 2vh 4vw;
+	}
+
+
+	.text_div a.mixtape-searched {
+		width:39vw;
+	  	margin: 1.50593vw 1.50593vw;
+	}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner h6 {
+		font-size: 1.50593vw;
+	}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-vert-rule {
+		height:4.51780vw;
+	}
+
+	.text_div a.mixtape-searched img.mixtape-searched-img {margin-bottom: 0.25vw;}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner { padding: 1.35534vw;}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-vert-rule {	height:4.51780vw;	}
+
+
+
+	.text_div a.mixtape-searched .mixtape-searched-banner h5 {padding-right: 1.35534vw;}
+
+
+	.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-tracks-time {
+		padding-left: 1.35534vw;
+		height:4.51780vw;
+	}
+
+}
+
+
+/* NOTE: there are media queries in the inserted-AJAX searches.*/
+
+@media screen and (max-width: 1400px) and (min-width: 851px) { 
+
+
+	#select-contents {
+		padding: 2vh 4vw;
+	}
+
+	.text_div a.mixtape-searched {
+		width:26.96vw;
+	}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner h6 {
+		font-size: 1vw;
+	}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-vert-rule {
+		height:3vw;
+	}
+
+	.text_div a.mixtape-searched img.mixtape-searched-img {margin-bottom: 0.25vw;}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner { padding: 0.9vw;}
+
+	.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-vert-rule {	height:3vw;	}
+
+
+
+	.text_div a.mixtape-searched .mixtape-searched-banner h5 {padding-right: 0.9vw;}
+
+
+	.text_div a.mixtape-searched .mixtape-searched-banner .mixtape-searched-tracks-time {
+		padding-left: 0.9vw;
+		height:3vw;
+	}
+
+
+}

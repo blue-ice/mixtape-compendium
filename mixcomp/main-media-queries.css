@@ -1,0 +1,30 @@
+@media screen and (max-width: 850px) { 
+
+  .title_box{font-size: 1.3rem; margin: auto; width: 1%; height: auto; display: table-cell; vertical-align: middle; padding: 0.75vw;}
+  
+  .social_div{width: 93vw; margin-top: 0;}
+
+  .header_container {text-align: center; }
+
+   .logo_div_sm {background-color:blue; 
+    max-width: none; min-width: none; width: auto; margin: auto; display: block;}
+
+
+
+
+
+
+}
+
+@media all and (max-device-width: 850px) {
+
+  .title_box{font-size: 1.3rem; margin: auto; width: 1%; height: auto; display: table-cell; vertical-align: middle; padding: 0.75vw;}
+  
+  .social_div{width: 93vw; margin-top: 0;}
+
+  .header_container {text-align: center; }
+
+   .logo_div_sm {background-color:blue; 
+    max-width: none; min-width: none; width: auto; margin: auto; display: block;}
+
+}

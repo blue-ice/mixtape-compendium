@@ -1,0 +1,135 @@
+
+	
+	<script>
+
+				playMixtape(CURRENTMT);
+
+
+				
+
+
+				// speed up page transition times by quitting audio loading
+
+				addEvent(document.getElementById("pick_title_box"), "click", function() { document.getElementById("mt-audio").src = ""; });
+
+				addEvent(document.getElementById("about_title_box"), "click", function() { document.getElementById("mt-audio").src = ""; });
+				addEvent(document.getElementById("send_title_box"), "click", function() { document.getElementById("mt-audio").src = ""; });
+
+				addEvent(document.getElementById("search_title_box"), "click", function() { document.getElementById("mt-audio").src = ""; });
+
+				window.onbeforeunload = function() { document.getElementById("mt-audio").src = ""; }
+
+
+				addEvent(window, "resize", setTrackDivHeight);
+				addEvent(window, "load", setTrackDivHeight);
+				addEvent(window, "load", loadMixtapeControlsandReactions);
+
+			
+
+
+				
+
+	</script>
+
+
+		<audio id="mt-audio"> 
+			<source src="/m/c3yu/audio/1.mp3">
+			<source src="/m/c3yu/audio/1.ogg">
+		</audio>
+
+	<div id="mt-full-div">
+		<div id="ed-notes-tracks">
+			<div class="mt-spacer"></div><!--
+			--><div class="ed-title"><h3>Editor's Notes: Tracks</h3></div><!--
+			--><div class="mt-spacer"></div><!--
+			--><div class="ed-notes">
+				<img class="ed-img" src="/m/c3yu/img/1.jpg">
+				<p class="ed-p">This mixtape...</p>
+			</div>
+		</div>
+
+		<div id="mt-player-and-tracks">
+		<div class="mt-spacer"></div>
+			<div id="mt-player" id="c3yu">
+				<h3 class="ed-title" style="display:none;">Player</h3>
+					<div class="mixtape-playing-a-banner">
+						<h5 class="mixtape-playing-a-title" id="mt-4">Peters and Busskohls Mix 1
+						</h5>
+					</div>
+					<img class="mixtape-playing-img" src="/img/mixtapes/washingtontriplg.png" alt="Peters and Busskohls Mix 1">
+					<div class="mixtape-controls">
+						<div id="mt-player-bar"><div></div></div>
+						<div id="mt-time-container">
+							<h6 class="mt-time" id="mt-time-elapsed">01:23</h6>
+							<h6 class="mt-time" id="mt-time-remaining">45:19</h6>
+						</div>
+						<div id="mt-buttons-container">
+							<button class="mt-control-button" id="pl-bt" onclick="if($('audio')[0].readyState < 3) {document.getElementById('mt-audio').load();}; document.getElementById('mt-audio').play()">
+								<img class="control-button-img" id="pl-img" src="/img/player-icons/play2.svg">
+							</button>
+							<button class="mt-control-button" id="ps-bt" onclick="document.getElementById('mt-audio').pause();">
+								<img class="control-button-img" id="ps-img" src="/img/player-icons/pause2.svg">
+							</button>
+							<button class="mt-control-button" id="st-bt" onclick="document.getElementById('pick_title_box').click()">
+								<img class="control-button-img" id="st-img" src="/img/player-icons/stop2.svg">
+							</button>
+							<button class="mt-control-button" id="rw-bt">
+								<img class="control-button-img" id="rw-img" src="/img/player-icons/rw2.svg">
+							</button>
+							<button class="mt-control-button" id="ff-bt">
+								<img class="control-button-img" id="ff-img" src="/img/player-icons/ff2.svg">
+							</button>
+							<button class="mt-control-button" id="dl-bt">
+								<img class="control-button-img" id="dl-img" src="/img/player-icons/dl2.svg">
+							</button>
+						</div>
+					</div>	
+			</div><!--
+		 --><div id="mt-tracks">
+				<a class="tracklist-a" id="tracks-resizable">
+					<h3 class="ed-title" style="display: none;">Tracklist</h3>
+					<ul>
+					  <li class="side-marker">SIDE A:</li>
+					  <li class="playing">01. Throwing Stones - The Grateful Dead</li>
+					  <li>02. Pinball Wizard - The Who</li>
+					  <li>03. Jessica - Altman Brothers Trio</li>
+					  <li>04. Good Times Roll - The Cars</li>
+					  <li>05. Throwing Stones - The Grateful Dead</li>
+					  <li class="side-marker">SIDE B:</li>
+					  <li>06. Throwing Stones - The Grateful Dead</li>
+					  <li>07. Throwing Stones - The Grateful Dead</li>
+					  <li>08. Throwing Stones - The Grateful Dead</li>
+					  <li>09. Throwing Stones - The Grateful Dead</li>
+					  <li>10. Throwing Stones - The Grateful Dead</li>
+					</ul>
+				</a>
+			</div>
+			
+		</div>
+		<div id="ed-notes-mt">
+			<div class="mt-spacer"></div><!--
+			--><div class="ed-title"><h3>Editor's Notes: Mixtape</h3></div><!--
+			--><div class="mt-spacer"></div><!--
+			--><div class="ed-notes" id="tracks-resizable-reference">
+				<img class="ed-img" src="/m/c3yu/img/2.jpg">
+				<p class="ed-p">This mixtape... a sd hasdhsad i aisaod saodsai aosidosaiod hdbq1 2b12b1 22d1 12bjasj  jadsnaja sdjsa dsajS</p>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+	<script>
+
+
+		
+
+
+		$('#dl-img').on('load', function() {
+			  setTrackDivHeight();
+		});
+
+	</script>

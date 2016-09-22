@@ -1,0 +1,88 @@
+html{width:100%; height:100%; margin: 0; }
+
+body {width:100%; background: #000; margin: 0; padding-top: 5vw; padding-bottom: 5vw; 
+  overflow: hidden;}
+
+video {
+position: fixed;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+-moz-transform: translateX(-50%) translateY(-50%);
+-ms-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg') no-repeat; background-size: cover;  -webkit-transition: 1s opacity; transition: 1s opacity; }
+
+
+
+img {
+  margin: 0 auto;
+  width: 100%;
+
+
+  max-width: 540px;
+  display: block;
+}
+
+.logo_div {
+  padding: 2rem;
+  overflow: hidden;
+
+  border-radius: 4px 4px 0 0; 
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
+}
+
+.text_div {
+    width: 70vw;
+  border-radius: 0 0 4px 4px;
+  text-align: center;
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;   
+font-weight: 100; background: rgba(0,0,0,1); color: white; padding: 2rem; margin: auto auto auto auto; font-size: 1.2rem;
+}
+
+
+h1 { font-size: 3rem; text-transform: uppercase; margin-top: 0; letter-spacing: .3rem; font-family: 'Raleway', sans-serif;}
+h2 {font-family: 'Bitter', serif;}
+p {font-family: 'Bitter', serif; text-align: center; font-size: 0.6rem;
+  margin-top: 2rem; }
+
+.text_div a { 
+  display: block;
+  width: 30%;
+  padding: 1rem;
+  border: none; 
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  background: rgba(81,168,245,0.3);
+  color: #fff;
+  border-radius: 4px; 
+  cursor: pointer;
+  outline: none;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+  -webkit-transition: .3s background;
+  transition: .3s background;
+
+  text-decoration: none;
+}
+
+.text_div a:hover { 
+   background: rgba(255,255,255,0.5);
+}
+
+
+
+
+
+
