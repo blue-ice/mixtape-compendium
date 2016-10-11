@@ -480,9 +480,10 @@ div.ed-title {
 
 	#mt-player-bar > div {
 		height: 12px;
-	}2
+	}
+
 	.mt-time {
-		font-size: 1em;
+		font-size: 2em;
 	}
 
 	/*about.css insertion, should really be in that document*/
@@ -711,7 +712,7 @@ li.side-marker {
 	color: #000;
 	font-weight: bold;
 	cursor: default;
-	padding: 9px 11px;
+	padding: 11px 14px;
 }
 
 
