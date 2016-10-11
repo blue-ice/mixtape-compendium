@@ -22,7 +22,91 @@
 
 				addEvent(window, "resize", setTrackDivHeight);
 				addEvent(window, "load", setTrackDivHeight);
-				addEvent(window, "load", loadMixtapeControlsandReactions);
+				loadMixtapeControlsandReactions();
+
+
+
+
+				var AUDIOLENGTH;
+
+				$("#mt-audio").on("canplay", function () {
+			        AUDIOLENGTH = this.duration;
+			    });
+
+
+				var AUDIOPERCENT;
+
+			    $("#mt-audio").on("timeupdate", function(){ 
+					$("#mt-time-elapsed").text(
+						("0" + (Math.floor((this.currentTime / 60))) ).slice(-2) + ":" +
+						("0" + (this.currentTime.toFixed(0) % 60)).slice(-2)
+					);
+
+
+					$("#mt-time-remaining").text(
+						("0" +  Math.floor(((AUDIOLENGTH - this.currentTime + 1) / 60)) ).slice(-2) + ":" +
+						("0" + ((AUDIOLENGTH.toFixed(0) - this.currentTime.toFixed(0)) % 60)).slice(-2)
+					);
+
+					AUDIOPERCENT = (this.currentTime/AUDIOLENGTH)*99 + 1;
+
+
+					$('#mt-player-bar > div').css(
+					{
+						"width": "-moz-calc(" + AUDIOPERCENT + "% + 2px)",
+						"width": "-webkit-calc(" + AUDIOPERCENT + "% + 2px)",
+						"width": "-o-calc(" + AUDIOPERCENT + "% + 2px)",
+						"width": "calc(" + AUDIOPERCENT + "% + 2px)"
+					});
+
+					var track_beginning_times = [0, 367, 639, 998, 1292, 1470, 1736, 1920, 2353, 2727, 2922, 3200, 3507, 3701];
+
+					for (var i = 0; i < 9; i++) {
+						if(this.currentTime.toFixed(0) < track_beginning_times[i]) {
+
+						}
+					}
+
+
+
+					$(".tracklist-a > ul > li").removeClass("playing");
+					if(this.currentTime < 367) {
+						$("#playing-1").addClass("playing");
+					} else if (this.currentTime < 639) {
+						$("#playing-2").addClass("playing");
+					} else if (this.currentTime < 998) {
+						$("#playing-3").addClass("playing");
+					} else if (this.currentTime < 1292) {
+						$("#playing-4").addClass("playing");
+					} else if (this.currentTime < 1470) {
+						$("#playing-5").addClass("playing");
+					} else if (this.currentTime < 1736) {
+						$("#playing-6").addClass("playing");
+					} else if (this.currentTime < 1920) {
+						$("#playing-7").addClass("playing");
+					} else if (this.currentTime < 2353) {
+						$("#playing-8").addClass("playing");
+					} else if (this.currentTime < 2727) {
+						$("#playing-9").addClass("playing");
+					} else if (this.currentTime < 2922) {
+						$("#playing-10").addClass("playing");
+					} else if (this.currentTime < 3200) {
+						$("#playing-11").addClass("playing");
+					} else if (this.currentTime < 3507) {
+						$("#playing-12").addClass("playing");
+					} else if (this.currentTime < 3701) {
+						$("#playing-13").addClass("playing");
+					} else {
+						$("#playing-14").addClass("playing");
+					}
+
+
+				
+
+
+				});
+
+
 
 			
 
@@ -37,6 +121,13 @@
 			<source src="/m/c3yu/audio/1.ogg">
 		</audio>
 
+		<img src="/img/player-icons/pl2.svg" style="display:none;">
+		<img src="/img/player-icons/ps2.svg" style="display:none;">
+		<img src="/img/player-icons/st2.svg" style="display:none;">
+		<img src="/img/player-icons/ff2.svg" style="display:none;">
+		<img src="/img/player-icons/rw2.svg" style="display:none;">
+		<img src="/img/player-icons/dl2.svg" style="display:none;">
+
 	<div id="mt-full-div">
 		<div id="ed-notes-tracks">
 			<div class="mt-spacer"></div><!--
@@ -44,7 +135,29 @@
 			--><div class="mt-spacer"></div><!--
 			--><div class="ed-notes">
 				<img class="ed-img" src="/m/c3yu/img/1.jpg">
-				<p class="ed-p">This mixtape...</p>
+				<p class="ed-p">
+					 Our mysterious mix master, Jamie, is quite obviously a rock fan- specifically a fan of several popular rock bands of the 1960s-1980s. Jamie's inclusion of 3 Bob Dylan tracks, 3 Guns N' Roses tracks, 3 Grateful Dead tracks, and 2 Fleetwood Mac tracks shows an obvious dedication to the bands of the era. Nevertheless, the mixtape is not entirely rock: the inclusion of ABC by The Jackson 5 shows an interest in the Billboard #1 soul song as well. The tracks Alone (Blues Traveler) and Copperline (James Taylor) also highlight an interest in the changing genre of alternative rock in the early 1990s.
+				<p>
+
+				<p class="ed-p">
+					 The juxtaposition on this mixtape between ABC (The Jackson 5) and One in A Million (Guns N' Roses) is strange indeed. Michael Jackson (of the Jackson 5) worked tirelessly to perform his music despite overt racism; he also often spoke out against racism publicly in his later years.<sup>[1]</sup> Yet Jamie also included the racist and homophobic song that got Guns N'Roses Ku Klux Klan endorsement and a dumping from an AIDS benefit concert:<sup>[2]</sup> One in A Million. This track features the lyrics "Police and niggers / That's right / Get outta my way" and "Immigrants and faggots / They make no sense to me / They come to our country / And think they'll / Do as they please / Like start some mini Iran / Or spread some / Fucking disease".<sup>[3]</sup> It's hard to say what's exactly going through Jamie's mind- perhaps the mixtape composer simply enjoys the musicality of the songs and disregards the lyrics.
+				<p>
+
+				<hr />
+
+				<p class="ed-p">
+					 1: Nega, Lacie. "Michael Jackson’s Experience of Racism." Michael Jackson Info: Rhythm Of The Tide. March 21, 2012. Accessed October 01, 2016. <a href="http://rhythmofthetide.com/michael-jacksons-experience-racism/">http://rhythmofthetide.com/michael-jacksons-experience-racism/</a>.
+				<p>
+
+				<p class="ed-p">
+					 2: Love, Katherine, Wallace Morgan, Joseph Hudak, Keith Harris, Maura Johnston, and Dan Epstein. "50 Wildest Guns N' Roses Moments." Rolling Stone. November 24, 2015. Accessed October 2, 2016. <a href="http://www.rollingstone.com/music/lists/50-wildest-guns-n-roses-moments-20151124/august-1989-one-in-a-million-shocks-the-world-with-racist-homophobic-slurs-20151119">http://www.rollingstone.com/music/lists/50-wildest-guns-n-roses-moments-20151124/august-1989-one-in-a-million-shocks-the-world-with-racist-homophobic-slurs-20151119</a>.
+				<p>
+
+				<p class="ed-p">
+					 3: "One In A Million- Guns N' Roses." Genius. Accessed October 01, 2016. <a href="http://genius.com/Guns-n-roses-one-in-a-million-lyrics">http://genius.com/Guns-n-roses-one-in-a-million-lyrics</a>.
+				<p>
+
+
 			</div>
 		</div>
 
@@ -53,35 +166,37 @@
 			<div id="mt-player" id="c3yu">
 				<h3 class="ed-title" style="display:none;">Player</h3>
 					<div class="mixtape-playing-a-banner">
-						<h5 class="mixtape-playing-a-title" id="mt-4">Peters and Busskohls Mix 1
+						<h5 class="mixtape-playing-a-title" id="mt-4">Jamie's Washington Mix 1
 						</h5>
 					</div>
 					<img class="mixtape-playing-img" src="/img/mixtapes/washingtontriplg.png" alt="Peters and Busskohls Mix 1">
 					<div class="mixtape-controls">
 						<div id="mt-player-bar"><div></div></div>
 						<div id="mt-time-container">
-							<h6 class="mt-time" id="mt-time-elapsed">01:23</h6>
-							<h6 class="mt-time" id="mt-time-remaining">45:19</h6>
+							<h6 class="mt-time" id="mt-time-elapsed">00:00</h6>
+							<h6 class="mt-time" id="mt-time-remaining">95:50</h6>
 						</div>
 						<div id="mt-buttons-container">
-							<button class="mt-control-button" id="pl-bt" onclick="if($('audio')[0].readyState < 3) {document.getElementById('mt-audio').load();}; document.getElementById('mt-audio').play()">
-								<img class="control-button-img" id="pl-img" src="/img/player-icons/play2.svg">
+							<button class="mt-control-button" id="pl-bt" onclick="pressButton(0);">
+								<img class="control-button-img" id="pl-img" src="/img/player-icons/pl.svg">
 							</button>
-							<button class="mt-control-button" id="ps-bt" onclick="document.getElementById('mt-audio').pause();">
-								<img class="control-button-img" id="ps-img" src="/img/player-icons/pause2.svg">
+							<button class="mt-control-button" id="ps-bt" onclick="pressButton(1);">
+								<img class="control-button-img" id="ps-img" src="/img/player-icons/ps.svg">
 							</button>
-							<button class="mt-control-button" id="st-bt" onclick="document.getElementById('pick_title_box').click()">
-								<img class="control-button-img" id="st-img" src="/img/player-icons/stop2.svg">
+							<button class="mt-control-button" id="st-bt" onclick="pressButton(2);">
+								<img class="control-button-img" id="st-img" src="/img/player-icons/st.svg">
 							</button>
-							<button class="mt-control-button" id="rw-bt">
-								<img class="control-button-img" id="rw-img" src="/img/player-icons/rw2.svg">
+							<button class="mt-control-button" id="rw-bt" onclick="pressButton(3);">
+								<img class="control-button-img" id="rw-img" src="/img/player-icons/rw.svg">
 							</button>
-							<button class="mt-control-button" id="ff-bt">
-								<img class="control-button-img" id="ff-img" src="/img/player-icons/ff2.svg">
+							<button class="mt-control-button" id="ff-bt" onclick="pressButton(4);">
+								<img class="control-button-img" id="ff-img" src="/img/player-icons/ff.svg">
 							</button>
-							<button class="mt-control-button" id="dl-bt">
-								<img class="control-button-img" id="dl-img" src="/img/player-icons/dl2.svg">
-							</button>
+							<form method="get" action='/m/c3yu/audio/1.2424.zip'>
+								<button class="mt-control-button" id="dl-bt" onclick="pressButton(5);">
+									<img class="control-button-img" id="dl-img" src="/img/player-icons/dl.svg">
+								</button>
+							</form>
 						</div>
 					</div>	
 			</div><!--
@@ -90,17 +205,21 @@
 					<h3 class="ed-title" style="display: none;">Tracklist</h3>
 					<ul>
 					  <li class="side-marker">SIDE A:</li>
-					  <li class="playing">01. Throwing Stones - The Grateful Dead</li>
-					  <li>02. Pinball Wizard - The Who</li>
-					  <li>03. Jessica - Altman Brothers Trio</li>
-					  <li>04. Good Times Roll - The Cars</li>
-					  <li>05. Throwing Stones - The Grateful Dead</li>
+					  <li id="playing-1" class="playing" onclick="jumpTo(0);">01. Like A Rolling Stone- Bob Dylan</li>
+					  <li id="playing-2" onclick="jumpTo(367);">02. The Chain- Fleetwood Mac</li>
+					  <li id="playing-3" onclick="jumpTo(639);">03. Patience- Guns N' Roses</li>
+					  <li id="playing-4" onclick="jumpTo(998);">04. Jack Straw- Grateful Dead</li>
+					  <li id="playing-5" onclick="jumpTo(1292);">05. ABC- The Jackson 5</li>
+					  <li id="playing-6" onclick="jumpTo(1470);">06. Copperline- James Taylor</li>
+					  <li id="playing-7" onclick="jumpTo(1736);">07. Positively 4th Street- Bob Dylan</li>
 					  <li class="side-marker">SIDE B:</li>
-					  <li>06. Throwing Stones - The Grateful Dead</li>
-					  <li>07. Throwing Stones - The Grateful Dead</li>
-					  <li>08. Throwing Stones - The Grateful Dead</li>
-					  <li>09. Throwing Stones - The Grateful Dead</li>
-					  <li>10. Throwing Stones - The Grateful Dead</li>
+					  <li id="playing-8" onclick="jumpTo(1920);">08. Tennessee Jed- Grateful Dead</li>
+					  <li id="playing-9" onclick="jumpTo(2353);">09. One in A Million- Guns N' Roses</li>
+					  <li id="playing-10" onclick="jumpTo(2727);">10. I Don't Want to Know- Fleetwood Mac</li>
+					  <li id="playing-11" onclick="jumpTo(2922);">11. Rainy Day Women #12 & 35- Bob Dylan</li>
+					  <li id="playing-12" onclick="jumpTo(3200);">12. I Know You Rider- Grateful Dead</li>
+					  <li id="playing-13" onclick="jumpTo(3507);">13. Used to Love Her- Guns N' Roses</li>
+					  <li id="playing-14" onclick="jumpTo(3701);">14. Alone- Blues Traveler</li>
 					</ul>
 				</a>
 			</div>
@@ -112,7 +231,8 @@
 			--><div class="mt-spacer"></div><!--
 			--><div class="ed-notes" id="tracks-resizable-reference">
 				<img class="ed-img" src="/m/c3yu/img/2.jpg">
-				<p class="ed-p">This mixtape... a sd hasdhsad i aisaod saodsai aosidosaiod hdbq1 2b12b1 22d1 12bjasj  jadsnaja sdjsa dsajS</p>
+				<p class="ed-p">Paradoxically, although this mixtape appears to be hand-recorded from physical albums, the mixtape composer didn't manage to squeeze the last track, Alone, all of the way onto the album. Some sort of miscalculation, perhaps? Laziness? </p>
+				<p class="ed-p">The rest of the mixtape, however, is meticulously put together, with fine recording techniques and very little wow or flutter from the recording device. The music reproduction quality, overall, is stellar, and there seems to have been little degredation of the mixtape since it was first recorded. This recording date is certainly after 1991, which was when the most modern song on the compilation, Copperline, by James Taylor, was released.</p>
 			</div>
 		</div>
 
@@ -127,7 +247,7 @@
 
 		
 
-
+		console.log('loadbox');
 		$('#dl-img').on('load', function() {
 			  setTrackDivHeight();
 		});

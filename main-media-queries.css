@@ -6,13 +6,8 @@
 
   .header_container {text-align: center; }
 
-   .logo_div_sm {background-color:blue; 
+   .logo_div_sm {
     max-width: none; min-width: none; width: auto; margin: auto; display: block;}
-
-
-
-
-
 
 }
 
@@ -24,7 +19,7 @@
 
   .header_container {text-align: center; }
 
-   .logo_div_sm {background-color:blue; 
+   .logo_div_sm {
     max-width: none; min-width: none; width: auto; margin: auto; display: block;}
 
 }

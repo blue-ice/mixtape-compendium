@@ -15,7 +15,7 @@
    id="svg4709"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="ff.svg">
+   sodipodi:docname="ff2.svg">
   <defs
      id="defs4711">
     <inkscape:path-effect
@@ -31,7 +31,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
-     inkscape:cx="36.548727"
+     inkscape:cx="-72.358344"
      inkscape:cy="29.446833"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -60,7 +60,7 @@
      transform="translate(0,-981.49606)">
     <path
        inkscape:connector-curvature="0"
-       style="fill:#c4c4c4;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26715553px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26715553px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 3.7026531,981.66729 0,70.52371 22.4392089,-19.4989 0,19.4989 28.892564,-25.1079 0,20.4706 12.129063,0 0,-61.24881 -12.129063,0 0,20.47501 -28.892564,-25.11261 0,19.50321 -22.4392089,-19.50321 z"
        id="path4498-4-1" />
   </g>

@@ -1,0 +1,41 @@
+
+
+#img-limit {
+	width: 89vw;
+    margin: 6vh auto 2vw auto;
+    overflow: hidden;
+}
+
+#main-image {
+	height: 20vh;
+}
+
+.about-text {
+	text-align: left;
+    padding: 0 4vw;
+    line-height: 1.5em;
+    font-family: Montserrat, sans-serif;
+    font-size: 1em;
+}
+
+.about-title {
+	text-align: center;
+	margin: 0;
+    margin: 4vh 0;
+    font-size: 2.5em;
+    padding: 0;
+    color: #ccc;
+    font-family: Bitter, serif;
+}
+
+a.about-link:hover {
+	background: none;
+	color: rgba(81,168,245,1);
+}
+
+a.about-link {
+	text-transform: uppercase;
+	color: #AAC4E7;
+	text-decoration: underline;
+	cursor: pointer;
+}

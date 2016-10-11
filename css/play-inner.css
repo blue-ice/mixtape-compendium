@@ -71,12 +71,14 @@ div.ed-title {
 
 	height: 78%;
 	margin-top: 0%;
+	width: 100%;
 
 	position: absolute;
     left: 0;
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
 
 .ed-notes::-webkit-scrollbar {
     display: none;
@@ -89,6 +91,16 @@ div.ed-title {
 	font-family:'Bitter',serif;
 
 	font-size:0.9rem;
+	line-height: 1.4em;
+}
+
+.ed-p > a {
+	color: #ddd;
+}
+
+.ed-p > a:hover {
+	background-color: #ddd;
+	color: #555;
 }
 
 .ed-img {
@@ -198,7 +210,7 @@ div.ed-title {
 	position: relative;
     overflow: hidden;
 }
-}
+
 
 #ed-notes-tracks h3 {
 	border-radius: 4px 0px 0px 0px;
@@ -269,11 +281,8 @@ div.ed-title {
     
 #mt-player-bar > div {
    background-color: #51a8f5;
-   width: 100%; /* Adjust with JavaScript */
-   width: -moz-calc(10% + 2px);
-	width: -webkit-calc(10% + 2px);
-	width: -o-calc(10% + 2px);
-	width: calc(10% + 2px);
+   width: 0px; /* Adjust with JavaScript */
+   
    height: 6px;
    border-radius: 30px;
    border-color: red;
@@ -287,6 +296,7 @@ div.ed-title {
 
 .mt-time {
 	font-size: 15px;
+	font-size: calc(12px + 0.3vw);
 	margin: 5px 0px 0px 0px;
 	display: inline-block;
     font-family: 'Montserrat', sans-serif;
@@ -314,8 +324,21 @@ div.ed-title {
 @media all and (max-device-width: 850px) { 
   
 	button {
-		height: 3.11vw;
-		width: 3.2vw;
+		height: 8vw;
+		width: 8.2vw;
+	}
+
+	h5.mixtape-playing-a-title {
+		font-size: 4vw;
+	}
+
+	.text_div, .header_container {
+		width: 94vw;
+	}
+
+	body {
+		padding-top: 2vw;
+		padding-bottom: 2vw;
 	}
 
 	#ed-notes-tracks, #ed-notes-mt {
@@ -323,12 +346,38 @@ div.ed-title {
 	}
 
 	#mt-player-and-tracks {
-		width: 80vw;
+		width: 88vw;
+	}
+
+	#mt-player {
+		margin-top: 3vw;
+		margin-bottom: 3vw;
+	}
+
+	#mt-tracks {
+		margin-bottom: 3vw;
 	}
 
 	#mt-full-div {
 		width: 100%;
 	}
+
+	html, body, #text_div_resizable_js #content_box #mt-full-div #mt-player-and-tracks {
+		height: auto;
+	}
+
+	.mixtape-controls {
+		padding: 3vw;
+	}
+
+	#mt-player-bar > div {
+		height: 12px;
+	}
+
+	.mt-time {
+		font-size: 17px;
+	}
+
 }
 
 
@@ -374,8 +423,30 @@ div.ed-title {
 @media screen and (max-width: 850px) { 
   
 	button {
-		height: 3.11vw;
-		width: 3.2vw;
+		height: 8vw;
+		width: 8.2vw;
+	}
+
+	h5.mixtape-playing-a-title {
+		font-size: 4vw;
+	}
+
+	.text_div, .header_container {
+		width: 94vw;
+	}
+
+	li.side-marker {
+		font-size: 1.8em;
+	}
+
+	ul > li {
+		font-size: 1.2em;
+		padding: 7px 19px;
+	}
+
+	body {
+		padding-top: 2vw;
+		padding-bottom: 2vw;
 	}
 
 	#ed-notes-tracks, #ed-notes-mt {
@@ -383,12 +454,52 @@ div.ed-title {
 	}
 
 	#mt-player-and-tracks {
-		width: 80vw;
+		width: 88vw;
+	}
+
+	#mt-player {
+		margin-top: 3vw;
+		margin-bottom: 3vw;
+	}
+
+	#mt-tracks {
+		margin-bottom: 3vw;
 	}
 
 	#mt-full-div {
 		width: 100%;
 	}
+
+	html, body, #text_div_resizable_js #content_box #mt-full-div #mt-player-and-tracks {
+		height: auto;
+	}
+
+	.mixtape-controls {
+		padding: 3vw;
+	}
+
+	#mt-player-bar > div {
+		height: 12px;
+	}
+
+	.mt-time {
+		font-size: 17px;
+	}
+
+	/*about.css insertion, should really be in that document*/
+
+	p.about-text {
+   		padding: 0 8vw;
+	}
+
+	p.about-text:last-child {
+		padding-bottom: 4vw;
+	}
+
+	h3.about-title {
+		padding: 0 6vw;
+	}
+
 }
 
 
@@ -483,6 +594,40 @@ button.active {
   background-color: #333;
 }
 
+#pl-bt:active img,
+#pl-bt.active img,
+#pl-bt.current-button img {
+	content: url(/img/player-icons/pl2.svg);
+ }
+#ps-bt:active img,
+#ps-bt.active img,
+#ps-bt.current-button img {
+	content: url(/img/player-icons/ps2.svg);
+ }
+#rw-bt:active img,
+#rw-bt.active img,
+#rw-bt.current-button img {
+	content: url(/img/player-icons/rw2.svg);
+ }
+#ff-bt:active img,
+#ff-bt.active img,
+#ff-bt.current-button img {
+	content: url(/img/player-icons/ff2.svg);
+ }
+#st-bt:active img,
+#st-bt.active img,
+#st-bt.current-button img {
+	content: url(/img/player-icons/st2.svg);
+ }
+#dl-bt:active img,
+#dl-bt.active img,
+#dl-bt.current-button img {
+	content: url(/img/player-icons/dl2.svg);
+ }
+
+form {
+	display: inline;
+}
 
 button:hover,
 button.hover {
@@ -533,8 +678,20 @@ li {
 	color: #000;
 	font-size: 14px;
 	padding: 5px 19px;
-	cursor: pointer;
+	cursor: default;
 }
+
+
+/*
+li.playing:hover {
+	color: #51a8f5;
+	background-color: #777;
+}
+*/
+
+
+li:nth-child(odd) { background-color: #dddddd; }
+
 
 li.playing {
 	color: #51a8f5;
@@ -542,19 +699,13 @@ li.playing {
 	font-weight: bold;
 }
 
-li.playing:hover {
-	color: #51a8f5;
-	background-color: #777;
-}
 
-
-li:nth-child(odd) { background-color: #dddddd; }
-
+/*
 li:hover {
 	background-color: #777;
 	color: #fff;
 }
-
+*/
 
 li.side-marker {
 	background-color: #c4c4c4;

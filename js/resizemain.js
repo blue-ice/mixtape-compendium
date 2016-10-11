@@ -26,26 +26,33 @@ var addEvent = function(elem, type, eventHandle) {
 
 function setContentsHeight() {
 
+		console.log($("#text_div_resizable_js").css('vertical-align'));
 
-		// if the screen is past the media query then just make it auto height (max of insides)
+		// if the device is in mobile view, then do not resize it
+		if ($("#text_div_resizable_js").css('vertical-align') == 'baseline') {
+   	
 
-		var bodydata = document.getElementsByTagName('body')[0];
+			// if the screen is past the media query then just make it auto height (max of insides)
 
-		var body_padding_top = window.getComputedStyle(bodydata, null).getPropertyValue('padding-top');
-		var body_padding_bottom = window.getComputedStyle(bodydata, null).getPropertyValue('padding-bottom');
+			var bodydata = document.getElementsByTagName('body')[0];
 
-		var text_div_padding_top = document.getElementById('header_container_info_js').style.paddingTop;
-		var text_div_padding_bottom = document.getElementById('header_container_info_js').style.paddingBottom;
+			var body_padding_top = window.getComputedStyle(bodydata, null).getPropertyValue('padding-top');
+			var body_padding_bottom = window.getComputedStyle(bodydata, null).getPropertyValue('padding-bottom');
 
-		var body_height = Math.max(document.body.offsetHeight, 
-                       document.documentElement.clientHeight,document.documentElement.offsetHeight );
+			var text_div_padding_top = document.getElementById('header_container_info_js').style.paddingTop;
+			var text_div_padding_bottom = document.getElementById('header_container_info_js').style.paddingBottom;
 
-		var header_height = document.getElementById('header_container_info_js').clientHeight;
+			var body_height = Math.max(document.body.offsetHeight, 
+	                       document.documentElement.clientHeight,document.documentElement.offsetHeight );
+
+			var header_height = document.getElementById('header_container_info_js').clientHeight;
 
 
-		var text_div_height = Math.round(parseInt(body_height) * 100) / 100 - Math.round(parseInt(body_padding_top) * 100) / 100 - Math.round(parseInt(body_padding_bottom) * 100) / 100 - Math.round(parseInt(header_height) * 100) / 100;
+			var text_div_height = Math.round(parseInt(body_height) * 100) / 100 - Math.round(parseInt(body_padding_top) * 100) / 100 - Math.round(parseInt(body_padding_bottom) * 100) / 100 - Math.round(parseInt(header_height) * 100) / 100;
 
-		document.getElementById('text_div_resizable_js').style.cssText = "height: " + text_div_height + "px; !important";
+			document.getElementById('text_div_resizable_js').style.cssText = "height: " + text_div_height + "px; !important";
+
+		}
 
 	};
 
@@ -80,18 +87,17 @@ var selectedBox = DEFAULTHOME; // Set the current box to DEFAULTHOME, which is s
 	function moveSliderTo(newBoxToSelect, showHide) {
 
 		// If the page to be loaded is "play-inner", then select "pick-title-box"
-		if(newBoxToSelect == 4) {newBoxToSelect=0;}
+		
 
 		elemId = sliderBoxes[newBoxToSelect];
+		if(newBoxToSelect == 4) {elemId=sliderBoxes[0];}
 
 		if(showHide == "hide") {
 			document.getElementById('select_shifter').style.visibility="hidden";
 			$( "#select_shifter" ).addClass('notransition'); // Disable transitions
 		}
 
-		
-
-			console.log(elemId);
+		console.log(newBoxToSelect);
 
 
 			
@@ -121,7 +127,8 @@ var selectedBox = DEFAULTHOME; // Set the current box to DEFAULTHOME, which is s
 		if(selectedBox != newBoxToSelect) {
 				console.log("SelectedBox: " + selectedBox + " newBoxToSelect: " + newBoxToSelect + " pushed")
 				// Push the page that the slider has moved to into the history of the browser
-				history.pushState(newBoxToSelect, null, "/" + sliderPages[newBoxToSelect] + ".html");
+				if(newBoxToSelect != 4) {history.pushState(newBoxToSelect, null, "/" + sliderPages[newBoxToSelect] + ".html");}
+				else {history.pushState(4, null, "/" + "c3yu" + ".html")}
 		}
 
 		selectedBox = newBoxToSelect;
