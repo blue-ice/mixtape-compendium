@@ -1,2 +1,2 @@
 # mixtape-compendium
-The website for mixc.org.
+The code for the website.
