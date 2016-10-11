@@ -2,7 +2,7 @@
   .text_div {width:80vw;} 
 
   .logo_div {
-    width: 80vw; background-color:blue;}
+    width: 80vw;}
   .text_div a { width: 60%; }
   #select_shifter {
 	-webkit-transition:.3s;
@@ -21,7 +21,7 @@
   .text_div {width:80vw;} 
 
   .logo_div {
-    width: 80vw; background-color:blue;}
+    width: 80vw;}
   .text_div a { width: 60%; }
 
   #select_shifter {
