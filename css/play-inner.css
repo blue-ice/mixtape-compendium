@@ -496,6 +496,10 @@ div.ed-title {
 		padding-bottom: 4vw;
 	}
 
+	p.about-text-bt:last-child {
+		padding-bottom: 4vw;
+	}
+
 	h3.about-title {
 		padding: 0 6vw;
 	}

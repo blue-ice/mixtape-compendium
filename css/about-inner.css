@@ -18,6 +18,14 @@
     font-size: 1em;
 }
 
+.about-text-bt {
+	text-align: right;
+    padding: 0 4vw;
+    line-height: 1.5em;
+    font-family: Montserrat, sans-serif;
+    font-size: 1em;
+}
+
 .about-title {
 	text-align: center;
 	margin: 0;
@@ -38,4 +46,21 @@ a.about-link {
 	color: #AAC4E7;
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+a.about-link-no-hl {
+	color: #AAC4E7;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.about-title-a {
+	text-align: center;
+	margin: 0;
+    margin: 4vh 0;
+	margin-bottom: 5vh;
+    font-size: 2.5em;
+    padding: 0;
+    color: #ccc;
+    font-family: Bitter, serif;
 }
