@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+	<!--
+	TO-DO:
+	Proper sizing of magnifying glass icon top
+	Fonts fallback
+	Logo
+	Video
+	UTF-16 across all documents
+	Title update on AJAX change
+	AJAX, redefine
+	-->
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-16">
+
+		<title>The Mixtape Compendium</title>
+
+		<!-- Google fonts CSS import (make backup fonts set up)-->
+		<style>
+		@import 'https://fonts.googleapis.com/css?family=Bitter|Raleway:300,400|Montserrat';
+		</style>
+
+		<!-- realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<meta name="theme-color" content="#ffffff">
+		
+
+		<!-- Normalize stylesheet resets everything to defaults across browsers-->
+		<link rel="stylesheet" href="normalize.css">
+
+		<!-- index.css has index.html specific code-->
+		<link rel="stylesheet" href="index.css">
+
+		<!-- index-media-queries.css has index.html specific code that deals with media queries-->
+		<link rel="stylesheet" href="index-media-queries.css">
+
+	</head>
+
+
+
+
+	<body>
+
+
+		<!-- HTML5 video -->
+		<video autoplay="" loop="" poster="polina.jpg" id="bgvid">
+		<source src="polina.webm" type="video/webm">
+		<source src="polina.mp4" type="video/mp4">
+		</video> 
+
+
+
+		<!-- The main logo, full width-->
+		<div class="logo_div">
+		<img src="mixcomlogo.png" alt="MDN">
+		</div>
+
+
+		<!-- The text div, full width-->
+		<div class="text_div">
+		<h1>PAUSE. REWIND.</h1>
+		<h2>Original mixtapes, saved digitally.</h2>
+		<h2>Pre-Y2K throwbacks, from rap to rock.</h2>
+		<h2>Classic boom-box fuzz.</h2>
+		<a class="cd-btn" href="pick.html" data-type="page-transition">Listen now</a>
+		<p>More about The Mixtape Compendium.</p>
+
+
+		</div>
+
+
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+	</body>
+
+</html>
