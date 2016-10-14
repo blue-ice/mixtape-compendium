@@ -6,7 +6,7 @@ var json = {
 					            "css_title_smallest_font_size": "1.500",
 					            "mt_image": "summerjamsa.png",
 					            "rec_time": "43:22",
-					            "num_tracks": "15",
+					            "num_tracks": "8",
 					            "rec_location": "denver, co"},
 					        {
 					        	"id": "2",
@@ -14,8 +14,8 @@ var json = {
 					            "mt_title": "Peters and Busskohls Mix 1",
 					            "css_title_smallest_font_size": "0.962",
 					            "mt_image": "summerjamsa.png",
-					            "rec_time": "48:26",
-					            "num_tracks": "17",
+					            "rec_time": "90:26",
+					            "num_tracks": "12",
 					            "rec_location": "savannah, ga"},
 					         {
 					        	"id": "3",
@@ -24,7 +24,7 @@ var json = {
 					            "css_title_smallest_font_size": "1.4",
 					            "mt_image": "summerjamsa.png",
 					            "rec_time": "28:45",
-					            "num_tracks": "14",
+					            "num_tracks": "5",
 					            "rec_location": "savannah, ga"},
 					         {
 					        	"id": "4",
@@ -32,8 +32,8 @@ var json = {
 					            "mt_title": "Jamie's Washington Mix 1",
 					            "css_title_smallest_font_size": "0.986",
 					            "mt_image": "summerjamsa.png",
-					            "rec_time": "23:55",
-					            "num_tracks": "5",
+					            "rec_time": "95:50",
+					            "num_tracks": "14",
 					            "rec_location": "savannah, ga"}]
 					    
 					};
