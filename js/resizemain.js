@@ -173,8 +173,10 @@ var selectedBox = DEFAULTHOME; // Set the current box to DEFAULTHOME, which is s
 	addEvent(document.getElementById("send_title_box"), "click", function() { return moveSliderTo(2,"show"); });
 	addEvent(document.getElementById("send_title_box"), "click", function() { return loadMainContent("/ajax/" + sliderPages[2] + "-inner.html") });
 
-	addEvent(document.getElementById("search_title_box"), "click", function() { return moveSliderTo(3,"show"); });
-	addEvent(document.getElementById("search_title_box"), "click", function() { return loadMainContent("/ajax/" + sliderPages[3] + "-inner.html") });
+	addEvent(document.getElementById("search_title_box"), "click", function() { //return moveSliderTo(3,"show");
+																				});
+	addEvent(document.getElementById("search_title_box"), "click", function() { //return loadMainContent("/ajax/" + sliderPages[3] + "-inner.html")
+																			   });
 
 
 

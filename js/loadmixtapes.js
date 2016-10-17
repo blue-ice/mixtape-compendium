@@ -1,32 +1,5 @@
 var json = {
 					        "mixtape": [{
-					        	"id": "1",
-					        	"shortcode": "hq8x",
-					            "mt_title": "Recordings I",
-					            "css_title_smallest_font_size": "1.500",
-					            "mt_image": "summerjamsa.png",
-					            "rec_time": "43:22",
-					            "num_tracks": "8",
-					            "rec_location": "denver, co"},
-					        {
-					        	"id": "2",
-					        	"shortcode": "br4v",
-					            "mt_title": "Peters and Busskohls Mix 1",
-					            "css_title_smallest_font_size": "0.962",
-					            "mt_image": "summerjamsa.png",
-					            "rec_time": "90:26",
-					            "num_tracks": "12",
-					            "rec_location": "savannah, ga"},
-					         {
-					        	"id": "3",
-					        	"shortcode": "ka3u",
-					            "mt_title": "Summer Days '92",
-					            "css_title_smallest_font_size": "1.4",
-					            "mt_image": "summerjamsa.png",
-					            "rec_time": "28:45",
-					            "num_tracks": "5",
-					            "rec_location": "savannah, ga"},
-					         {
 					        	"id": "4",
 					        	"shortcode": "c3yu",
 					            "mt_title": "Jamie's Washington Mix 1",
