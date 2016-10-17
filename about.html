@@ -34,6 +34,17 @@
 
 	</head>
 
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-85864900-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
 <!--
 <audio autoplay>
   <source src="https://raw.githubusercontent.com/blue-ice/public-test/master/files/Backbeat.mp3" type="audio/mpeg">
@@ -47,9 +58,7 @@
 
 
 	<!-- Needed for like button-->
-
-		
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57d8c84a4b63f315"></script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57d8c84a4b63f315&async=1&domready=1"></script>
 
 
 
@@ -94,6 +103,13 @@
 		<script src="/selectize/dist/js/standalone/selectize.min.js"></script>
 		<script src="/js/loadmixtapes.js"></script>
 		<script src="/js/playmixtape.js"></script>
+		<script type="text/javascript"> 
+			 function initAddThis() {
+			    addthis.init()
+			 }
+
+			initAddThis();
+		</script>
 
 	</body>
 
