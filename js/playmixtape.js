@@ -115,20 +115,20 @@ function pressButton(whichButton) { // button handler
 
 function playMixtape(selectedMtCode) {
 
-	$("#mt-full-div").fadeOut(150, function(){          
-		//$("#ed-mt-notes").empty();
+	// $("#mt-full-div").fadeOut(150, function(){          
+	// 	//$("#ed-mt-notes").empty();
 
 
-					$.each(json.mixtape, function(i, mixtapeReviewing) {
-					    if (mixtapeReviewing.shortcode == selectedMtCode) {
-					    	//$("#mt-player").append("<h3>" + mixtapeReviewing.shortcode + "</h3>");
-					    }
-					});
+	// 				$.each(json.mixtape, function(i, mixtapeReviewing) {
+	// 				    if (mixtapeReviewing.shortcode == selectedMtCode) {
+	// 				    	//$("#mt-player").append("<h3>" + mixtapeReviewing.shortcode + "</h3>");
+	// 				    }
+	// 				});
 
 
-					$("#mt-full-div").fadeIn(150);
+	// 				$("#mt-full-div").fadeIn(150);
 
-			});
+	// 		});
 
 
 }

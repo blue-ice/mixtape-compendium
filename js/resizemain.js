@@ -1,5 +1,9 @@
 
 
+
+
+
+
 // The page is loaving for the first time, so set FIRSTLOAD to true.
 
 var FIRSTLOAD=true;
@@ -127,8 +131,10 @@ var selectedBox = DEFAULTHOME; // Set the current box to DEFAULTHOME, which is s
 		if(selectedBox != newBoxToSelect) {
 				console.log("SelectedBox: " + selectedBox + " newBoxToSelect: " + newBoxToSelect + " pushed")
 				// Push the page that the slider has moved to into the history of the browser
-				if(newBoxToSelect != 4) {history.pushState(newBoxToSelect, null, "/" + sliderPages[newBoxToSelect] + ".html");}
-				else {history.pushState(4, null, "/" + "c3yu" + ".html")}
+				if(newBoxToSelect != 4) {console.log("PUSH: "+newBoxToSelect+", null, /" + sliderPages[newBoxToSelect] + ".html");
+						history.pushState(newBoxToSelect, null, "/" + sliderPages[newBoxToSelect] + ".html");}
+				else {console.log("PUSH: 4, null, \"/\" + \"c3yu\" + \".html\"");
+					history.pushState(4, null, "/" + "c3yu" + ".html")}
 		}
 
 		selectedBox = newBoxToSelect;
@@ -139,7 +145,7 @@ var selectedBox = DEFAULTHOME; // Set the current box to DEFAULTHOME, which is s
 
 
 
-	function loadMainContent(doc) {
+	function loadAjaxContent(doc) {
 
 
 			//$('#content_box').load("ajax/" + doc + ".html");
@@ -165,17 +171,17 @@ var selectedBox = DEFAULTHOME; // Set the current box to DEFAULTHOME, which is s
 	// https://stackoverflow.com/questions/2663631/how-to-pass-parameter-to-the-attachevent-javascript-function
 
 	addEvent(document.getElementById("pick_title_box"), "click", function() { return moveSliderTo(0,"show"); });
-	addEvent(document.getElementById("pick_title_box"), "click", function() { return loadMainContent("/ajax/" + sliderPages[0] + "-inner.html") });
+	addEvent(document.getElementById("pick_title_box"), "click", function() { return loadAjaxContent("/ajax/" + sliderPages[0] + "-inner.html") });
 
 	addEvent(document.getElementById("about_title_box"), "click", function() { return moveSliderTo(1,"show"); });
-	addEvent(document.getElementById("about_title_box"), "click", function() { return loadMainContent("/ajax/" + sliderPages[1] + "-inner.html") });
+	addEvent(document.getElementById("about_title_box"), "click", function() { return loadAjaxContent("/ajax/" + sliderPages[1] + "-inner.html") });
 
 	addEvent(document.getElementById("send_title_box"), "click", function() { return moveSliderTo(2,"show"); });
-	addEvent(document.getElementById("send_title_box"), "click", function() { return loadMainContent("/ajax/" + sliderPages[2] + "-inner.html") });
+	addEvent(document.getElementById("send_title_box"), "click", function() { return loadAjaxContent("/ajax/" + sliderPages[2] + "-inner.html") });
 
 	addEvent(document.getElementById("search_title_box"), "click", function() { //return moveSliderTo(3,"show");
 																				});
-	addEvent(document.getElementById("search_title_box"), "click", function() { //return loadMainContent("/ajax/" + sliderPages[3] + "-inner.html")
+	addEvent(document.getElementById("search_title_box"), "click", function() { //return loadAjaxContent("/ajax/" + sliderPages[3] + "-inner.html")
 																			   });
 
 
@@ -183,22 +189,24 @@ var selectedBox = DEFAULTHOME; // Set the current box to DEFAULTHOME, which is s
 	addEvent(window, "load", setContentsHeight);
 	addEvent(window, "resize", setContentsHeight);
 
-
 	window.addEventListener("popstate", function(previousSelectedBox) {
 					if(previousSelectedBox.state!=null) {
 						console.log("Slider moved to" + previousSelectedBox.state);
 						selectedBox = previousSelectedBox.state;
 						moveSliderTo(previousSelectedBox.state, "show");
+						loadAjaxContent("/ajax/" + sliderPages[previousSelectedBox.state] + "-inner.html");
 					} else {
 						console.log("Slider moved to" + previousSelectedBox.state);
 						selectedBox=0;
 						moveSliderTo(0, "show");
+						loadAjaxContent("/ajax/" + sliderPages[0] + "-inner.html");
 					}
 			} );
 
 	addEvent(window, "load", function() { return moveSliderTo(selectedBox,"hide"); });
-	addEvent(window, "load", function()  { if(FIRSTLOAD==true) {loadMainContent("/ajax/" + sliderPages[DEFAULTHOME] + "-inner.html")} } );
+	addEvent(window, "load", function()  { if(FIRSTLOAD==true) {loadAjaxContent("/ajax/" + sliderPages[DEFAULTHOME] + "-inner.html")} } );
 	addEvent(window, "resize", function() { return moveSliderTo(selectedBox,"hide"); });
+
 
 
 

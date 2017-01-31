@@ -61,8 +61,8 @@ function loadMixtapes(locationSelected){
 									"<script type=\"text/javascript\">" +
 										"addEvent(document.getElementById(\"" + mixtapeReviewing.shortcode + "\"), \"click\", function() { CURRENTMT=\"" + mixtapeReviewing.shortcode + "\";console.log(\""+ mixtapeReviewing.shortcode +"\"); });"+
 										"addEvent(document.getElementById(\"" + mixtapeReviewing.shortcode + "\"), \"click\", function() { return moveSliderTo(0,\"show\"); });"+
-										"addEvent(document.getElementById(\"" + mixtapeReviewing.shortcode + "\"), \"click\", function() { return loadMainContent(\"/ajax/play-inner.html\"); });" +
-										"addEvent(document.getElementById(\"" + mixtapeReviewing.shortcode + "\"), \"click\", function() {history.pushState(null, null, \"/m/" + mixtapeReviewing.shortcode + "\");});" +
+										"addEvent(document.getElementById(\"" + mixtapeReviewing.shortcode + "\"), \"click\", function() { return loadAjaxContent(\"/ajax/play-inner.html\"); });" +
+										"addEvent(document.getElementById(\"" + mixtapeReviewing.shortcode + "\"), \"click\", function() { history.pushState(4, null, \"/m/" + mixtapeReviewing.shortcode + "\");});" +
 									"</script>" );
         				$("#select-contents-centerer").fadeIn(150);
 
